@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content">
+ <div class="container-fluid">
+          <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary" id="Alertbox">Alert Box</h6>
+               </div>
+
+
+            <div class="card-body">
+
+              <div>
+                  <button type="button" onclick="alertbox('scs'); " class="btn btn-success">Success Alert</button>
+                  <button type="button" onclick="alertbox('dngr');" class="btn btn-danger">Danger Alert</button>
+                  <button type="button" onclick="alertbox('warng');" class="btn btn-warning">Warning Alert</button>
+              </div>
+              <!-- <div class="table-responsive"> -->
+
+
+              <div class="alert alert-success scs mt-3"  id ="scs" role="alert" style="display:none">
+                This is a success alert—check it out!
+              </div>
+              <div class="alert alert-danger dngr" role="alert" style="display:none">
+                This is a danger alert—check it out!
+              </div>
+              <div class="alert alert-warning warng" role="alert" style="display:none">
+                This is a warning alert—check it out!
+              </div>
+
+              <!-- table responsive  </div> -->
+            </div>
+          </div>
+          
+          	<!-- ACTUAL BODY CONTENT -->
+          
+          </div>
+         
+</div> 
+<script>
+
+    function alertbox(alrt){
+    //  console.log(alrt);
+            var str ="."+alrt;
+              $(str).attr('style', 'display:"";');
+    };
+
+</script>
+
+</body>
+</html>

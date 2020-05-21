@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <style>
+
+    /*style for loader*/
+    .loader {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url('resources/common/images/d-loading.gif') 50% 50% no-repeat rgb(249, 249, 249);
+    }
+  </style>
+
+</head>
+<body>
+<div class="loader"></div>
+<div layout:fragment="content">
+          <div class="conatiner-fluid">
+          
+   <nav aria-label="breadcrumb" class="mt-2">
+   <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="indexwithsm">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">DataTable</li>
+  </ol>
+</nav>
+          
+          <div class="card shadow mb-4 mt-2 border-left-danger" >
+
+            <!--card header-->
+            <div class="card-header py-3">
+              <div class="form -group row">
+                <div class="col-sm-10 mb-3 mb-sm-0">
+                  <h6 class="m-0 font-weight-bold " id="datatables">DataTables Example</h6>
+                </div>
+                <!-- <div class="d-flex flex-row-reverse"> -->
+                <div class="col-sm-2 mb-3 mb-sm-0">
+                  <button type="button" class="btn btn-primary btn-icon-split float-right" data-toggle="modal" data-target="#myModal" id="idAddOption">
+                    <span class="icon ">
+                      <i class="fas fa-plus"></i>
+                    </span> <span class="text">Add New</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--end of card header-->
+
+
+            <div class="card-body">
+
+               <div class="table-responsive"> 
+              <table class="table table-bordered table-striped col-sm-12 mb-3 mb-sm-0" id="example1" width="100%" cellspacing="0">
+
+                <thead>
+                  <tr>
+
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                    <th>View</th>
+                    <th>Edit</th>
+
+                  </tr>
+                </thead>
+
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Office</th>
+                    <th>Age</th>
+                    <th>Start date</th>
+                    <th>Salary</th>
+                    <th>View</th>
+                    <th>Edit</th>
+
+                  </tr>
+                </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                    <td>
+                      <button class="btn text-primary" id="proposalViewButton" onclick="viewEmplmedaProposal()">
+                        <i class="fas fa-eye fa-lg"></i>
+                      </button>
+                    </td>
+                    <td><button class="btn text-warning" data-toggle="modal" data-target="#myModal" id="idAddOption">
+                        <i class="fas fa-edit fa-lg"></i>
+                      </button></td>
+                    <!-- <td><button class="btn" data-toggle="modal" data-target="#deletemodel" id="idAddOption">
+                        <i class="fas fa-trash text-danger fa-lg"></i>
+                      </button></td> -->
+                  </tr>
+                  <tr>
+                    <td>Garrett Winters</td>
+                    <td>dog</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                    <td>
+                      <button class="btn text-primary" id="proposalViewButton" onclick="viewEmplmedaProposal('emprop01')">
+                        <i class="fas fa-eye fa-lg"></i>
+                      </button>
+                    </td>
+                    <td><button class="btn text-warning" data-toggle="modal" data-target="#myModal" id="idAddOption">
+                        <i class="fas fa-edit fa-lg"></i>
+                      </button></td>
+                    <!-- <td><button class="btn" data-toggle="modal" data-target="#deletemodel" id="idAddOption">
+                        <i class="fas fa-trash text-danger fa-lg"></i>
+                      </button></td> -->
+                  </tr>
+                  <tr>
+                    <td>Ashton Cox</td>
+                    <td>Junior Technical Author</td>
+                    <td>San Francisco</td>
+                    <td>66</td>
+                    <td>2009/01/12</td>
+                    <td>$86,000</td>
+                    <td>
+                      <button class="btn text-primary" id="proposalViewButton" onclick="viewEmplmedaProposal('emprop01')">
+                        <i class="fas fa-eye fa-lg"></i>
+                      </button>
+                    </td>
+                    <td><button class="btn text-warning" data-toggle="modal" data-target="#myModal" id="idAddOption">
+                        <i class="fas fa-edit fa-lg"></i>
+                      </button></td>
+                    <!-- <td><button class="btn" data-toggle="modal" data-target="#deletemodel" id="idAddOption">
+                        <i class="fas fa-trash text-danger fa-lg"></i>
+                      </button></td> -->
+                  </tr>
+                  <tr>
+                    <td>Cedric Kelly</td>
+                    <td>Senior Javascript Developer</td>
+                    <td>Edinburgh</td>
+                    <td>22</td>
+                    <td>2012/03/29</td>
+                    <td>$433,060</td>
+                    <td>
+                      <button class="btn text-primary" id="proposalViewButton" onclick="viewEmplmedaProposal('emprop01')">
+                        <i class="fas fa-eye fa-lg"></i>
+                      </button>
+                    </td>
+                    <td><button class="btn text-warning" data-toggle="modal" data-target="#myModal" id="idAddOption">
+                        <i class="fas fa-edit fa-lg"></i>
+                      </button></td>
+                    <!-- <td><button class="btn" data-toggle="modal" data-target="#deletemodel" id="idAddOption">
+                        <i class="fas fa-trash text-danger fa-lg"></i>
+                      </button></td> -->
+                  </tr>
+                </tbody>
+              </table>
+              <span class="exportbuttons">
+
+              </span>
+              <!-- </div> -->
+              <!-- table responsive --> </div> 
+            </div>
+          </div>
+
+          <!---->
+          <div class="card border-0 shadow-lg mx-5  mb-4" id="divViewEmplmedaProposal">
+            <!-- Card Header - Accordion -->
+            <a href="#collapseCardViewProposal" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardViewProposal">
+              <h6 class="m-0 font-weight-bold text-primary">Auto Scroll [View]</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="collapseCardViewProposal">
+              <div class="card-body ">
+
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Name<span class="text-danger">*</span></b></label>
+                    <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Position<span class="text-danger">*</span></b></label>
+                    <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Office<span class="text-danger">*</span></b></label>
+                    <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Age<span class="text-danger">*</span></b></label>
+                    <input type="number" class="form-control" name="NumberField" placeholder="Number Field">
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Start Date<span class="text-danger">*</span></b></label>
+                    <input type="date" class="form-control" name="DateField" placeholder="Date Field">
+                  </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <label><b>Age<span class="text-danger">*</span></b></label>
+                    <input type="number" class="form-control" name="NumberField" placeholder="Number Field">
+                  </div>
+                </div>
+
+              </div>
+              <!--end of card body-->
+            </div>
+            <!--end of collapse show-->
+          </div>
+          <!--end of card-->
+
+          <!--start of modal related to add new record-->
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header bg-light">
+                  <h4 class="modal-title" style="color:black;">This is Modal</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Name<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Position<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Office<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Age<span class="text-danger">*</span></b></label>
+                      <input type="number" class="form-control" name="NumberField" placeholder="Number Field">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Start Date<span class="text-danger">*</span></b></label>
+                      <input type="date" class="form-control" name="DateField" placeholder="Date Field">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Age<span class="text-danger">*</span></b></label>
+                      <input type="number" class="form-control" name="NumberField" placeholder="Number Field">
+                    </div>
+                  </div>
+
+                </div>
+                <!--end of modal body-->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success">Save</button>
+                  <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+              <!--end of modal-content-->
+
+            </div>
+          </div>
+          <!--end of modal-->
+
+
+          <!--start of model related to Delete-->
+          <div class="modal fade" id="deletemodel" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header bg-light">
+                  <h4 class="modal-title" style="color:black;">Delete Record</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Name<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <div class="col-sm-12 mb-3 mb-sm-0">
+                      <label><b>Position<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                  </div>
+
+
+
+                </div>
+                <!--end of modal body-->
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger">Delete</button>
+                  <button type="button" class="btn btn-warning" data-dismiss="modal">Cancel</button>
+                </div>
+              </div>
+              <!--end of modal-content-->
+
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+     
+      <!-- End of Main Content -->
+
+     
+
+    
+    <!-- End of Content Wrapper -->
+
+ 
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+  <!--export table js-->
+   <script th:src="|resources/js/datatablejs/jquery-3.3.1.js|"></script> 
+  
+
+ 
+  <!--js for loader--->
+  <script>
+    $(window).ready(function() {
+      $('.loader').fadeOut(1000);
+    });
+  </script>
+
+</body>
+</html>

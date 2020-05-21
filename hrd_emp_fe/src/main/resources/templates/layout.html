@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!--/*  Each token will be replaced by their respective titles in the resulting page. */-->
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Task List</title>
+    
+<link rel="stylesheet" type="text/css" th:href="@{/resources/common/css/style.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}"/>
+<link rel="stylesheet" type="text/css" th:href="@{/webjars/startbootstrap-sb-admin-2/4.0.6/css/sb-admin-2.css}"/>
+ <link rel="stylesheet"
+	th:href="@{https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/common/css/sb-admin-2.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/resources/common/css/ecge-custom.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/webjars/font-awesome/5.7.2/css/all.min.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/webjars/datatables/1.10.19/css/jquery.dataTables.min.css}"/>
+		<link rel="stylesheet" type="text/css" th:href="@{/resources/common/css/navbar-megamenu.css}"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+<link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/buttons/1.5.6/css/buttons.dataTables.min.css" rel="stylesheet">
+	
+  </head>
+  <body id="page-top">
+    <!--/* Standard layout can be mixed with Layout Dialect */-->
+    <div th:replace="fragments/header :: header">
+    </div>
+<div id="wrapper">
+		<div th:replace="fragments/sidebar :: sidebar">
+		</div>
+ <div id="content-wrapper" class="d-flex flex-column">
+  <div id="content">
+   <div class="container-fluid">
+      <div layout:fragment="content">
+        <!-- ============================================================================ -->
+        <!-- This content is only used for static prototyping purposes (natural templates)-->
+        <!-- and is therefore entirely optional, as this markup fragment will be included -->
+        <!-- from "fragments/header.html" at runtime.                                     -->
+        <!-- ============================================================================ -->
+        <h1>Static content for prototyping purposes only</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+          Phasellus et placerat elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Praesent scelerisque neque neque, ac elementum quam dignissim interdum.
+          Phasellus et placerat elit.
+        </p>
+      </div>
+      </div>
+    </div>
+</div>
+      <div th:replace="fragments/footer :: footer"></div>
+    </div>
+    
+        <script th:src="|/webjars/jquery/3.3.1/jquery.min.js|"></script>
+        <script th:src="|/webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js|"></script>
+                <script th:src="|/webjars/jquery-easing/1.4.1/jquery.easing.min.js|"></script>
+                <script th:src="|/webjars/font-awesome/5.7.2/js/fontawesome.min.js|"></script>
+        <script th:src="|https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js|"></script>
+                <script th:src="|/webjars/datatables/1.10.19/js/jquery.dataTables.min.js|"></script>
+        
+                <script th:src="|/webjars/datatables/1.10.19/js/dataTables.bootstrap.min.js|"></script>
+                <script th:src="|/webjars/startbootstrap-sb-admin-2/4.0.6/js/sb-admin-2.min.js|"></script>
+              
+        
+     <script th:src="|resources/js/datatablejs/jquery.dataTables.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/dataTables.bootstrap4.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/dataTables.buttons.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/jszip.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/pdfmake.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/vfs_fonts.js|"></script>
+ <script th:src="|resources/js/datatablejs/buttons.html5.min.js|"></script>
+ <script th:src="|resources/js/datatablejs/buttons.print.min.js|"></script>
+ <script th:src="|resources/js/multistep.js|"></script>
+ <script th:src="|resources/js/exporttable.js|"></script>
+ <script th:src="|resources/js/autoscroll.js|"></script> 
+ <script th:src="|resources/js/buttonbootstrap4.js|"></script> 
+     <script th:src="|resources/js/sidemenucollapse.js|"></script> 
+    
+  </body>
+
+</html>
+
+
+

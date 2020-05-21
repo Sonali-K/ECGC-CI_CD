@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content">
+<div class="container-fluid">
+		<div class="card shadow mb-4 mt-2">
+
+			<!--card header-->
+			<div class="card-header py-3 ">
+				<div class="form -group row">
+					<div class="col-sm-12 mb-3 mb-sm-0">
+						<h6 class="m-0 font-weight-bold text-primary" id="datatables">Index</h6>
+					</div>
+					<!-- <div class="d-flex flex-row-reverse"> -->
+
+				</div>
+			</div>
+			<!--end of card header-->
+			<div class="card-body">
+				<p>These are the commonly used Components in ECGC SMILE Project.</p>
+				<p>We recommend to use these Components only to maintain
+					uniformity.Please let us know any changes if any</p>
+				<p>
+					<strong>Please let us know if you are using any third
+						party library on mentioned mailIds.(nimish@cdac.in /
+						prakash@cdac.in)</strong>
+				</p>
+
+<!-- 				<div class="table-responsive">
+ -->					<table class="table table-bordered col-sm-12 mb-3 mb-sm-0"
+						id="example1" width="100%" cellspacing="0">
+
+						<thead>
+							<tr>
+								<th>No.</th>
+								<th>TemplateName</th>
+								<th>Template Description</th>
+								<th>Link</th>
+							</tr>
+						</thead>
+
+						<tfoot>
+							<tr>
+								<th>No.</th>
+								<th>TemplateName</th>
+								<th>Template Description</th>
+								<th>Link</th>
+							</tr>
+						</tfoot>
+						<tbody>
+
+							<tr>
+								<td>1</td>
+								<td>UI GuideLines</td>
+								<td>These are the UI GuideLines.</td>
+								<td><a
+									href="http://10.212.0.206:81/ECGC/Ecgc-Documents/tree/master/ExportCreditGuaranteeCorporation_Docs/UI_UX_Repository"></a>UI_GuideLines</td>
+							</tr>
+
+
+
+
+							<tr>
+								<td>2</td>
+								<td>Data Table</td>
+								<td>
+									<p>
+										End users need to be able to obtain useful information from
+										the table as quickly as possible and for this DataTables has
+										built in features such as ordering, searching and paging.and
+										it also have utility to export data into various format like
+										PDF,CSV,etc. <br>
+										<span style="font-weight: bold"><strong>
+												Delete functionality is not provided very easily to user.We
+												recommend to create a new page for deletion of any entry.In
+												case of not so critical entries the same can be provided as
+												a column alongside view and edit. </strong></span>
+									</p>
+								</td>
+								<td><a href="datatablewithsm">Data Table</a></td>
+							</tr>
+
+							<tr>
+
+								<td>3</td>
+								<td>Common Form Elements</td>
+								<td>Bootstrap’s form controls expand on our Rebooted form
+									styles with classes. Use these classes to opt into their
+									customized displays for a more consistent rendering across
+									browsers and devices.</td>
+								<td><a href="formelementswithsm">commonly used form
+										elements</a></td>
+							</tr>
+							<tr>
+
+								<td>4</td>
+								<td>Buttons</td>
+								<td>Using color to add meaning only provides a visual
+									indication, which will not be conveyed to users of assistive
+									technologies – such as screen readers. Ensure that information
+									denoted by the color is either obvious from the content itself
+									(e.g. the visible text), or is included through alternative
+									means, such as additional text hidden with the .sr-only class.
+								</td>
+								<td><a href="buttonswithsm">Buttons</a></td>
+							</tr>
+							<tr>
+
+								<td>5</td>
+								<td>AlertBox Example</td>
+								<td>Alerts are available for any length of text, as well as
+									an optional dismiss button. For proper styling, use one of the
+									eight required contextual classes (e.g., .alert-success). For
+									inline dismissal, use the alerts jQuery plugin.</td>
+								<td><a href="alertwithsm">alert</a></td>
+							</tr>
+							<tr>
+
+								<td>6</td>
+								<td>Detailed View</td>
+								<td>You Can take necessary action on the particular record.
+								</td>
+								<td><a href="deatailedtableswithsm">Data Table With
+										Actions</a></td>
+							</tr>
+							<tr>
+								<td>7</td>
+								<td>User Profile</td>
+								<td>Profile which is divided into multipe tabs for ease of
+									navigation</td>
+								<td><a href="userprofilewithsm">User Profile</a></td>
+							</tr>
+							<tr>
+
+								<td>8</td>
+								<td>Exporter Profile</td>
+								<td>Profile which is divided into multipe tabs ease of
+									navigation</td>
+								<td><a href="exporter_profilewithsm">Exporter Profile</a></td>
+							</tr>
+							<tr>
+
+								<td>9</td>
+								<td>Employee Profile</td>
+								<td>Profile which is divided into multipe tabs ease of
+									navigation</td>
+								<td><a href="employee_profilewithsm">Employee Profile</a></td>
+							</tr>
+
+							<tr>
+								<td>10</td>
+								<td>Loader Example</td>
+								<td>Preloaders (also known as loaders) are simple
+									animations that are used to keep visitors entertained while the
+									page is still loading - this helps to enhance the user
+									experience. They’re built only with HTML and CSS, meaning you
+									don’t need any JavaScript to create them. You will, however,
+									need some custom JavaScript to toggle their visibility. Their
+									appearance, alignment, and sizing can be easily customized with
+									our amazing utility classes.</td>
+								<td><a href="loaderwithsm">Loader Example</a></td>
+							</tr>
+							<tr>
+								<td>11</td>
+								<td>Multi step form</td>
+								<td>A multi-step form is a long form that is broken into
+									multiple pieces. They’re used to make long forms, such as
+									shipping or registration forms, less intimidating and daunting.
+									By allowing customers and leads to complete their information
+									in smaller chunks, you create a positive user experience and
+									increase conversions.</td>
+								<td><a href="multistepperwithsm">Multi step form
+										Example</a></td>
+							</tr>
+							<tr>
+								<td>12</td>
+								<td>Table To Json</td>
+								<td>plugin that converts an HTML Table into a javascript
+									object.</td>
+								<td><a href="tabletojsonwithsm">Table ToJson Demo</a></td>
+							</tr>
+							<tr>
+								<td>13</td>
+								<td>Dashboard</td>
+								<td>Landing Page.</td>
+								<td><a href="dashboardwithsm">Dashboard</a></td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				<!-- </div> -->
+				<!-- table responsive  </div> -->
+			</div>
+		</div>
+
+		<!-- ACTUAL BODY CONTENT -->
+
+	</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style>
+
+    /*style for loader*/
+    .loader {
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background: url('resources/common/images/d-loading.gif') 50% 50% no-repeat rgb(249, 249, 249);
+    }
+    </style>
+
+</head>
+<body>
+<div layout:fragment="content">
+ <div class="container-fluid">
+            <div class="loader"></div>
+
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary" id="Alertbox">Loader</h6>
+               </div>
+
+
+            <div class="card-body">
+
+                <p><strong>This is sample example of page loader.</strong></p>
+              <!-- table responsive  </div> -->
+            </div>
+          </div>
+          
+          	<!-- ACTUAL BODY CONTENT -->
+          
+          </div>
+
+</div>
+        
+            <script th:src="|resources/js/datatablejs/jquery-3.3.1.js|"></script> 
+           
+          
+<script>
+  $(window).ready(function() {
+    $('.loader').fadeOut(1000);
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+2020-04-03 09:48:06,620 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-03 09:48:07,634 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Fetching config from server at : http://localhost:8888
+2020-04-03 09:48:10,449 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Located environment: name=hrd-emp-be, profiles=[default], label=null, version=054a23d4039ffbd7de619269561e5b699aa4d82c, state=null
+2020-04-03 09:48:10,452 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [restartedMain] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://gitlab.com/Vinayak30696/config-server-repo.git/application.properties'}]
+2020-04-03 09:48:10,459 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-03 09:48:12,064 WARN org.springframework.boot.actuate.endpoint.EndpointId [restartedMain] Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-03 09:48:12,226 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=31d3e23a-c153-39a0-9947-356daea0417e
+2020-04-03 09:48:12,976 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-04-03 09:48:12,984 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-04-03 09:48:12,985 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-03 09:48:12,986 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-03 09:48:13,197 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-03 09:48:13,199 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 2716 ms
+2020-04-03 09:48:13,310 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-04-03 09:48:13,311 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-03 09:48:13,320 INFO com.netflix.config.DynamicPropertyFactory [restartedMain] DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@55dbdc32
+2020-04-03 09:48:14,788 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 18 endpoint(s) beneath base path '/actuator'
+2020-04-03 09:48:14,894 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-03 09:48:14,926 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-04-03 09:48:14,926 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-03 09:48:15,023 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-03 09:48:15,078 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-04-03 09:48:15,950 WARN org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [restartedMain] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-03 09:48:16,084 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
+2020-04-03 09:48:16,118 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
+2020-04-03 09:48:16,710 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON encoding codec LegacyJacksonJson
+2020-04-03 09:48:16,710 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON decoding codec LegacyJacksonJson
+2020-04-03 09:48:16,853 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML encoding codec XStreamXml
+2020-04-03 09:48:16,854 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML decoding codec XStreamXml
+2020-04-03 09:48:17,111 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
+2020-04-03 09:48:17,435 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
+2020-04-03 09:48:17,436 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
+2020-04-03 09:48:17,437 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
+2020-04-03 09:48:17,437 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
+2020-04-03 09:48:17,438 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
+2020-04-03 09:48:17,438 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
+2020-04-03 09:48:17,439 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
+2020-04-03 09:48:17,688 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
+2020-04-03 09:48:17,691 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
+2020-04-03 09:48:17,693 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-04-03 09:48:17,697 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1585887497696 with initial instances count: 0
+2020-04-03 09:48:17,699 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application HRD-EMP-BE with eureka with status UP
+2020-04-03 09:48:17,700 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1585887497700, current=UP, previous=STARTING]
+2020-04-03 09:48:17,702 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083: registering service...
+2020-04-03 09:48:17,702 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-04-03 09:48:17,720 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-04-03 09:48:17,762 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - registration status: 204
+2020-04-03 09:48:17,773 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-04-03 09:48:17,943 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-04-03 09:48:17,983 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-04-03 09:48:17,985 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8083
+2020-04-03 09:48:18,478 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started HrdEmpBeApplication in 12.705 seconds (JVM running for 14.583)
+2020-04-03 09:48:47,694 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Disable delta property : false
+2020-04-03 09:48:47,695 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Single vip registry refresh property : null
+2020-04-03 09:48:47,696 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Force full registry fetch : false
+2020-04-03 09:48:47,697 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application is null : false
+2020-04-03 09:48:47,698 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Registered Applications size is zero : true
+2020-04-03 09:48:47,700 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Application version is -1: false
+2020-04-03 09:48:47,700 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] Getting all instance registry info from the eureka server
+2020-04-03 09:48:47,760 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-CacheRefreshExecutor-0] The response status is 200
+2020-04-03 09:53:17,443 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 09:58:17,445 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:03:17,448 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:07:56,869 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-03 10:07:56,869 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-03 10:07:56,875 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 5 ms
+2020-04-03 10:07:56,893 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-1] --Inside Get all employees--
+2020-04-03 10:07:56,893 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-1] --Fetching Employee data--
+2020-04-03 10:07:56,899 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8083-exec-1] HikariPool-1 - Starting...
+2020-04-03 10:07:57,074 INFO com.zaxxer.hikari.HikariDataSource [http-nio-8083-exec-1] HikariPool-1 - Start completed.
+2020-04-03 10:10:41,145 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:15:41,147 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:20:41,150 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:25:41,152 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:30:41,155 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 10:35:41,157 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:08:31,211 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m3s985ms276µs).
+2020-04-03 11:10:15,134 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:15:15,137 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:20:15,139 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:24:37,589 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-1] --Inside Get all employees--
+2020-04-03 11:24:37,590 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-1] --Fetching Employee data--
+2020-04-03 11:25:15,141 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:26:18,016 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Inside save employee data--
+2020-04-03 11:26:18,017 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Creating Employee with this data--
+2020-04-03 11:26:18,195 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-4] --Inside Get all employees--
+2020-04-03 11:26:18,196 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-4] --Fetching Employee data--
+2020-04-03 11:30:15,144 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:35:15,148 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 11:40:15,150 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:00:03,489 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m2s221ms283µs300ns).
+2020-04-03 12:03:47,361 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:08:47,363 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:13:47,366 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:18:47,369 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:23:47,370 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:28:47,374 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:33:47,376 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:38:47,379 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:43:47,382 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:48:47,385 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:53:47,388 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 12:58:47,391 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:03:47,393 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:08:47,396 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:11:37,665 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-8] --Inside Get all employees--
+2020-04-03 13:11:37,669 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-8] --Fetching Employee data--
+2020-04-03 13:13:47,400 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:16:51,398 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-4] --Inside Get all employees--
+2020-04-03 13:16:51,399 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-4] --Fetching Employee data--
+2020-04-03 13:18:47,402 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:23:47,405 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 13:26:24,418 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-10] --Inside save employee data--
+2020-04-03 13:26:24,419 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-10] --Creating Employee with this data--
+2020-04-03 15:01:41,666 WARN com.zaxxer.hikari.pool.HikariPool$HouseKeeper [HikariPool-1 housekeeper] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h34m7s998ms512µs800ns).
+2020-04-03 15:02:25,394 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:02:36,596 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-2] --Inside save employee data--
+2020-04-03 15:02:36,597 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-2] --Creating Employee with this data--
+2020-04-03 15:02:36,630 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Inside Get all employees--
+2020-04-03 15:02:36,630 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Fetching Employee data--
+2020-04-03 15:02:42,454 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-5] --Inside Delete Employee--
+2020-04-03 15:02:42,454 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-5] --Deleting Employee Data--
+2020-04-03 15:02:42,648 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-6] --Inside Get all employees--
+2020-04-03 15:02:42,649 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-6] --Fetching Employee data--
+2020-04-03 15:07:25,395 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:12:25,397 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:17:25,399 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:22:25,401 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:27:25,404 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:32:25,405 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:37:25,407 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:38:26,596 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-7] --Inside Get all employees--
+2020-04-03 15:38:26,597 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-7] --Fetching Employee data--
+2020-04-03 15:42:25,407 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:47:25,411 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:52:25,414 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 15:57:25,649 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:00:08,264 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-9] --Inside Get all employees--
+2020-04-03 16:00:08,265 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-9] --Fetching Employee data--
+2020-04-03 16:02:25,652 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:02:46,518 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Inside Get all employees--
+2020-04-03 16:02:46,518 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-3] --Fetching Employee data--
+2020-04-03 16:07:25,653 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:12:25,656 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:17:25,658 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:22:25,660 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:27:25,664 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2020-04-03 16:29:05,560 INFO in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-10] --Inside Get all employees--
+2020-04-03 16:29:05,561 ERROR in.ecgc.erp.hrd_emp_be.controller.EmployeeController [http-nio-8083-exec-10] --Fetching Employee data--
+2020-04-03 16:31:10,526 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [Thread-8] Unregistering application HRD-EMP-BE with eureka with status DOWN
+2020-04-03 16:31:10,542 WARN com.netflix.discovery.DiscoveryClient$3 [Thread-8] Saw local status change event StatusChangeEvent [timestamp=1585911670541, current=DOWN, previous=UP]
+2020-04-03 16:31:10,562 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083: registering service...
+2020-04-03 16:31:10,687 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - registration status: 204
+2020-04-03 16:31:10,846 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-8] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-03 16:31:10,991 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown initiated...
+2020-04-03 16:31:11,145 INFO com.zaxxer.hikari.HikariDataSource [Thread-8] HikariPool-1 - Shutdown completed.
+2020-04-03 16:31:11,310 INFO com.netflix.discovery.DiscoveryClient [Thread-8] Shutting down DiscoveryClient ...
+2020-04-03 16:31:14,313 INFO com.netflix.discovery.DiscoveryClient [Thread-8] Unregistering ...
+2020-04-03 16:31:14,384 INFO com.netflix.discovery.DiscoveryClient [Thread-8] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - deregister  status: 200
+2020-04-03 16:31:14,463 INFO com.netflix.discovery.DiscoveryClient [Thread-8] Completed shut down of DiscoveryClient
+2020-04-03 16:31:16,623 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Fetching config from server at : http://localhost:8888
+2020-04-03 16:31:19,091 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [restartedMain] Located environment: name=hrd-emp-be, profiles=[default], label=null, version=054a23d4039ffbd7de619269561e5b699aa4d82c, state=null
+2020-04-03 16:31:19,091 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [restartedMain] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://gitlab.com/Vinayak30696/config-server-repo.git/application.properties'}]
+2020-04-03 16:31:19,178 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-04-03 16:31:19,658 INFO org.springframework.cloud.context.scope.GenericScope [restartedMain] BeanFactory id=8c1c71bb-cb24-3197-abc6-cd355abd4e24
+2020-04-03 16:31:19,871 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8083 (http)
+2020-04-03 16:31:19,872 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8083"]
+2020-04-03 16:31:19,872 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2020-04-03 16:31:19,872 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-04-03 16:31:19,888 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2020-04-03 16:31:19,888 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 708 ms
+2020-04-03 16:31:20,278 INFO org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver [restartedMain] Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-04-03 16:31:20,303 INFO springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping [restartedMain] Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-04-03 16:31:20,309 WARN com.netflix.config.sources.URLConfigurationSource [restartedMain] No URLs will be polled as dynamic configuration sources.
+2020-04-03 16:31:20,309 INFO com.netflix.config.sources.URLConfigurationSource [restartedMain] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-03 16:31:20,344 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-03 16:31:20,352 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2020-04-03 16:31:20,621 WARN org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [restartedMain] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-03 16:31:20,650 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [restartedMain] Setting initial instance status as: STARTING
+2020-04-03 16:31:20,652 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Initializing Eureka in region us-east-1
+2020-04-03 16:31:20,656 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON encoding codec LegacyJacksonJson
+2020-04-03 16:31:20,656 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using JSON decoding codec LegacyJacksonJson
+2020-04-03 16:31:20,656 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML encoding codec XStreamXml
+2020-04-03 16:31:20,657 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [restartedMain] Using XML decoding codec XStreamXml
+2020-04-03 16:31:20,697 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [restartedMain] Resolving eureka endpoints via configuration
+2020-04-03 16:31:20,698 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Disable delta property : false
+2020-04-03 16:31:20,698 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Single vip registry refresh property : null
+2020-04-03 16:31:20,698 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Force full registry fetch : false
+2020-04-03 16:31:20,698 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application is null : false
+2020-04-03 16:31:20,699 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Registered Applications size is zero : true
+2020-04-03 16:31:20,699 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Application version is -1: true
+2020-04-03 16:31:20,699 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Getting all instance registry info from the eureka server
+2020-04-03 16:31:20,701 INFO com.netflix.discovery.DiscoveryClient [restartedMain] The response status is 200
+2020-04-03 16:31:20,702 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Starting heartbeat executor: renew interval is: 30
+2020-04-03 16:31:20,702 INFO com.netflix.discovery.InstanceInfoReplicator [restartedMain] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-04-03 16:31:20,703 INFO com.netflix.discovery.DiscoveryClient [restartedMain] Discovery Client initialized at timestamp 1585911680703 with initial instances count: 3
+2020-04-03 16:31:20,703 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [restartedMain] Registering application HRD-EMP-BE with eureka with status UP
+2020-04-03 16:31:20,704 INFO com.netflix.discovery.DiscoveryClient$3 [restartedMain] Saw local status change event StatusChangeEvent [timestamp=1585911680704, current=UP, previous=STARTING]
+2020-04-03 16:31:20,704 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083: registering service...
+2020-04-03 16:31:20,705 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Context refreshed
+2020-04-03 16:31:20,706 INFO springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper [restartedMain] Found 1 custom documentation plugin(s)
+2020-04-03 16:31:20,708 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - registration status: 204
+2020-04-03 16:31:20,712 INFO springfox.documentation.spring.web.scanners.ApiListingReferenceScanner [restartedMain] Scanning for api listing references
+2020-04-03 16:31:20,739 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8083"]
+2020-04-03 16:31:20,741 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8083 (http) with context path ''
+2020-04-03 16:31:20,742 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [restartedMain] Updating port to 8083
+2020-04-03 16:31:20,799 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-03 16:31:20,800 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Initializing Servlet 'dispatcherServlet'
+2020-04-03 16:31:20,803 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8083-exec-1] Completed initialization in 3 ms
+2020-04-03 16:31:20,914 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started HrdEmpBeApplication in 5.006 seconds (JVM running for 24197.063)
+2020-04-03 16:31:20,919 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation delta:
+
+
+==========================
+CONDITION EVALUATION DELTA
+==========================
+
+
+Positive matches:
+-----------------
+
+   LogFileWebEndpointAutoConfiguration#logFileWebEndpoint matched:
+      - Log File found logging.file.path logs (LogFileWebEndpointAutoConfiguration.LogFileCondition)
+      - @ConditionalOnMissingBean (types: org.springframework.boot.actuate.logging.LogFileWebEndpoint; SearchStrategy: all) did not find any beans (OnBeanCondition)
+
+
+Negative matches:
+-----------------
+
+    None
+
+
+Exclusions:
+-----------
+
+    None
+
+
+Unconditional classes:
+----------------------
+
+    None
+
+
+
+2020-04-03 16:32:58,873 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [Thread-18] Unregistering application HRD-EMP-BE with eureka with status DOWN
+2020-04-03 16:32:58,874 WARN com.netflix.discovery.DiscoveryClient$3 [Thread-18] Saw local status change event StatusChangeEvent [timestamp=1585911778874, current=DOWN, previous=UP]
+2020-04-03 16:32:58,874 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083: registering service...
+2020-04-03 16:32:58,876 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [Thread-18] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-03 16:32:58,877 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - registration status: 204
+2020-04-03 16:32:58,878 INFO com.netflix.discovery.DiscoveryClient [Thread-18] Shutting down DiscoveryClient ...
+2020-04-03 16:33:01,889 INFO com.netflix.discovery.DiscoveryClient [Thread-18] Unregistering ...
+2020-04-03 16:33:01,895 INFO com.netflix.discovery.DiscoveryClient [Thread-18] DiscoveryClient_HRD-EMP-BE/DESKTOP-CEKU0A0:hrd-emp-be:8083 - deregister  status: 200
+2020-04-03 16:33:01,908 INFO com.netflix.discovery.DiscoveryClient [Thread-18] Completed shut down of DiscoveryClient

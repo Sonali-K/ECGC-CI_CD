@@ -1,0 +1,67 @@
+# Docker Compose file Reference (https://docs.docker.com/compose/compose-file/)
+version: '3'
+
+#Define services
+services:
+
+  #PostgreSQL Database for the application
+  hrd-emp-be-postgres:
+    image: "postgres:9.6-alpine"
+    container_name: postgres1
+    #Volume mounted for database for the storage
+    volumes:
+      - scrum-data:/var/lib/postgresql/data
+    ports:
+      - 5433:5432 # Forward the exposed port 5432 on the container to port 5432 on the host machine
+
+    #Environment variable for DB name, user and password
+    environment:
+      - POSTGRES_DB=demo_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+
+   #Eureka Spring Boot Application
+  discoveryserver:
+    #The docker file in scrum-app build the jar and provides the docker image with the following name.
+    image: discoveryserver
+    container_name: discoveryserver
+
+    ports:
+      - 8001:8000 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+
+  #Back-end Spring Boot Application
+  hrd-emp-be:
+    #The docker file in hrd-emp-be build the jar and provides the docker image with the following name.
+    image: hrd-emp-be
+    container_name: hrd-emp-be
+
+    #Environment variables for Spring Boot Application.
+    environment:
+      - DB_SERVER=hrd-emp-be-postgres
+      - POSTGRES_DB=demo_db
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    ports:
+      - 8084:8083 # Forward the exposed port 8080 on the container to port 8080 on the host machine
+    links:
+      -   discoveryserver
+      -   hrd-emp-be-postgres
+      
+
+  #Fron-end Angular Application
+  hrd-emp-fe:
+    image: hrd-emp-fe
+    container_name: hrd-emp-fe
+    ports:
+      - 8085:8082
+    links:
+      - discoveryserver  
+      - hrd-emp-be
+
+
+#Volumes for DB
+volumes:
+  scrum-data:
+
+   
+

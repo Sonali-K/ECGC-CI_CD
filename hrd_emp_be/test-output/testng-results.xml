@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2020-04-27T16:27:52Z" name="Default suite" finished-at="2020-04-27T16:27:56Z" duration-ms="4112">
+    <groups>
+    </groups>
+    <test started-at="2020-04-27T16:27:52Z" name="Default test" finished-at="2020-04-27T16:27:56Z" duration-ms="4112">
+      <class name="in.ecgc.erp.hrd_emp_be.TestNGController">
+        <test-method is-config="true" signature="springTestContextBeforeTestClass()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:52Z" name="springTestContextBeforeTestClass" finished-at="2020-04-27T21:57:52Z" duration-ms="6" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method is-config="true" signature="springTestContextPrepareTestInstance()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:52Z" name="springTestContextPrepareTestInstance" finished-at="2020-04-27T21:57:56Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" duration-ms="3813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="setup" finished-at="2020-04-27T21:57:56Z" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextBeforeTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.addEmployee() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="addEmployee()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="addEmployee" finished-at="2020-04-27T21:57:56Z" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addEmployee -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextAfterTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.addEmployee() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextBeforeTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.deleteEmployee() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="deleteEmployee()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="deleteEmployee" finished-at="2020-04-27T21:57:56Z" duration-ms="19" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteEmployee -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextAfterTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.deleteEmployee() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextBeforeTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.viewAllEmployees()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method signature="viewAllEmployees()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="viewAllEmployees" finished-at="2020-04-27T21:57:56Z" duration-ms="14" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- viewAllEmployees -->
+        <test-method is-config="true" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextAfterTestMethod" finished-at="2020-04-27T21:57:56Z" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void in.ecgc.erp.hrd_emp_be.TestNGController.viewAllEmployees()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method is-config="true" signature="springTestContextAfterTestClass()[pri:0, instance:in.ecgc.erp.hrd_emp_be.TestNGController@201b6b6f]" started-at="2020-04-27T21:57:56Z" name="springTestContextAfterTestClass" finished-at="2020-04-27T21:57:56Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- in.ecgc.erp.hrd_emp_be.TestNGController -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

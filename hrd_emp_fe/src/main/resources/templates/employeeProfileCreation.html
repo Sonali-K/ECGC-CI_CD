@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content">
+   <div class="container-fluid">
+          <nav aria-label="breadcrumb" class="mt-2">
+   <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="indexwithsm">HRD</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Employee Creation</li>
+  </ol>
+</nav>
+          <div class="card shadow mb-4 mt-2">
+
+            <!--collapseable card -->
+            <!-- <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+              <h6 class="m-0 font-weight-bold text-primary">Form Elements(With Collapsable Card)</h6>
+            </a> -->
+            <!-- collapsable card start -->
+            <!-- <div class="collapse show" id="collapseCardExample"> -->
+            <!-- card body start -->
+            <div class="card-header py-3 ">
+
+              <h6 class="m-0 font-weight-bold text-primary" id="datatables">Employee Creation</h6>
+
+            </div>
+            <div class="card-body">
+
+              <!-- Page Heading -->
+
+              <div class="d-sm-flex align-items-center justify-content-center mb-4">
+               
+              </div>
+
+
+              <!-- Nested Row within Card Body -->
+              <div class="row">
+                <div class="col-lg-12">
+                <form action="#" th:action="@{/saveEmployeeData}" th:object="${employee}"
+                                 method="post">
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b> Employee Id<span class="text-danger">*</span></b></label>
+                      <input  type="text" class="form-control" th:field="*{empId}" id="">
+                      <span  th:errors="*{empId}" style="color:red">error</span>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>First Name<span class="text-danger">*</span></b></label>
+                     <input type="text" class="form-control" th:field="*{firstName}" id=""></input>
+										<span  th:errors="*{firstName}" style="color:red"></span>
+                     
+                      </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Middle Name<span class="text-danger">*</span></b></label>
+                     <input type="text" class="form-control" th:field="*{midName}" id="" ></input>
+					<span  th:errors="*{midName}" style="color:red"></span>
+                    </div>
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Last Name<span class="text-danger">*</span></b></label>
+                     <input type="text" class="form-control" th:field="*{lastName}" id="" ></input>
+					<span th:errors="*{lastName}" style="color:red"></span>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Designation<span class="text-danger">*</span></b></label>
+                     <input type="text" class="form-control" th:field="*{designation}" id="" ></input>
+						<span th:errors="*{designation}" style="color:red"></span>
+                    </div>
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Employee Type<span class="text-danger">*</span></b></label>
+                     <input type="text" class="form-control" th:field="*{empType}" id=""></input>
+					<span th:errors="*{empType}" style="color:red"></span>
+                    </div>
+                    
+                 
+                  </div>
+
+
+                  <div class="form-group row">
+                      <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>DOB<span class="text-danger">*</span></b></label>
+                     <input type="date" class="form-control" th:field="*{dob}"></input>
+											<span th:errors="*{dob}" style="color:red"></span>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Date of Joining<span class="text-danger">*</span></b></label>
+                     <input type="date" class="form-control" th:field="*{doj}"
+											id="" ></input>
+											<span th:errors="*{doj}" style="color:red"></span>
+                    </div>
+                  </div>
+
+               
+
+                <input type="submit" class="btn btn-primary" value="Submit"></input> 
+
+          </form>
+                </div>
+              </div>
+
+            </div>
+            <!--End of card body -->
+            <!-- </div> -->
+            <!-- End of collapsable card -->
+         
+          	<!-- ACTUAL BODY CONTENT -->
+          </div>
+          </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+.card-hedaer{
+	  font-size: 24px;
+}
+.card-subhedaer{
+	  font-size: 20px;
+}
+.card-content{
+	  font-size: 16px;
+}
+.ux-topbar
+{
+	height:1.0rem;
+}
+ .topbarbgcolor{
+ background-color:#284cb5;
+ 
+ }
+ 
+@font-face
+{
+    font-family: NosiferCaps-Regular;
+    src: url('/resources/fonts/riesling.ttf');
+} 
+.sidebarcolor{
+	background-color: #EEEEEE;
+}
+

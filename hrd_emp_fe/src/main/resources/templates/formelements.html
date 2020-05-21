@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div layout:fragment="content">
+   <div class="container-fluid">
+          <nav aria-label="breadcrumb" class="mt-2">
+   <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="indexwithsm">Home</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Form Elements</li>
+  </ol>
+</nav>
+          <div class="card shadow mb-4 mt-2">
+
+            <!--collapseable card -->
+            <!-- <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+              <h6 class="m-0 font-weight-bold text-primary">Form Elements(With Collapsable Card)</h6>
+            </a> -->
+            <!-- collapsable card start -->
+            <!-- <div class="collapse show" id="collapseCardExample"> -->
+            <!-- card body start -->
+            <div class="card-header py-3 ">
+
+              <h6 class="m-0 font-weight-bold text-primary" id="datatables">Commonly Used Form Elements</h6>
+
+            </div>
+            <div class="card-body">
+
+              <!-- Page Heading -->
+
+              <div class="d-sm-flex align-items-center justify-content-center mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Form Elements</h1>
+              </div>
+
+
+              <!-- Nested Row within Card Body -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Text field<span class="text-danger">*</span></b></label>
+                      <input type="text" class="form-control" name="TextField" placeholder="TextField">
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Password<span class="text-danger">*</span></b></label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                      <input type="checkbox" onclick="myFunction()">Show Password </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Email<span class="text-danger">*</span></b></label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Dropdown</b></label>
+                      <select class="form-control" name="DropDown">
+                        <option value="option1">Value1</option>
+                        <option value="option2">Value2</option>
+                        <option value="option3">Value3</option>
+                        <option value="option4">Value4</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6">
+                      <label><b>Mulitple select(selectpicker)<span class="text-danger">*</span></b></label>
+                      <select class="form-control selectpicker w-100" name="DropDownSelectpicker" multiple>
+                        <option value="option1">Value1</option>
+                        <option value="option2">Value2</option>
+                        <option value="option3">Value3</option>
+                        <option value="option4">Value4</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Number<span class="text-danger">*</span></b></label>
+                      <input type="number" class="form-control" name="NumberField" placeholder="Number Field">
+                    </div>
+                  </div>
+
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Textarea<span class="text-danger">*</span></b></label>
+                      <textarea class="form-control" rows="2" name="textArea" cols="58"></textarea>
+                    </div>
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <label><b>Date<span class="text-danger">*</span></b></label>
+                      <input type="date" class="form-control" name="DateField" placeholder="Date Field">
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0 form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                              Default checkbox
+                        </label><br>
+                          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                            <label class="form-check-label" for="defaultCheck2">
+                              Disabled checkbox
+                            </label>
+                  </div>
+
+                    <div class="col-sm-6 mb-3 mb-sm-0 form-check">
+                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Default radio
+                  </label><br>
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+        <label class="form-check-label" for="exampleRadios3">
+          Disabled radio
+        </label>
+                    </div>
+                  </div>
+
+                  <div class="form-group row">
+                    <div class="col-sm-6 mb-3 mb-sm-0">
+                      <div class="form-group row">
+                        <div class="col">
+                          <div class="form-group">
+                            <label><b>Fileupload</b></label>
+                            <div class="custom-file">
+                              <input type="file" class=" custom-file-input" name="img[]" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                              <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+          
+                </div>
+              </div>
+
+            </div>
+            <!--End of card body -->
+            <!-- </div> -->
+            <!-- End of collapsable card -->
+         
+          	<!-- ACTUAL BODY CONTENT -->
+          </div>
+          </div>
+
+</div>
+</body>
+</html>

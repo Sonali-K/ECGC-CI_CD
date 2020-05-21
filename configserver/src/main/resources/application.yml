@@ -1,0 +1,30 @@
+server:
+  port: 8888
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitlab.com/Vinayak30696/config-server-repo.git
+          clone-on-start: true
+        bootstrap: true
+      
+      
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include:
+#        - /*
+        
+              
+     
+         
+  
+   
+      
+      
+      
+      
+           
