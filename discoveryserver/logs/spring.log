@@ -756,3 +756,44 @@
 2020-05-21 11:37:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
 2020-05-21 11:38:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
 2020-05-21 11:39:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:40:16 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2020-05-21 11:40:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:41:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:42:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:43:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:44:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:45:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:46:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:47:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:48:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:49:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:50:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:51:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:52:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:53:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:54:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:55:16 [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] INFO  c.n.e.r.PeerAwareInstanceRegistryImpl - Current renewal threshold is : 5
+2020-05-21 11:55:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:56:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:57:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:58:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 11:59:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 12:00:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 12:00:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2020-05-21 12:00:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2020-05-21 12:00:40 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/application/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2020-05-21 12:00:40 [main] INFO  i.e.s.e.EurekaserverApplicationTests - No active profile set, falling back to default profiles: default
+2020-05-21 12:00:40 [main] INFO  i.e.s.e.EurekaserverApplicationTests - Started EurekaserverApplicationTests in 1.454 seconds (JVM running for 2.87)
+2020-05-21 12:00:59 [http-nio-8000-exec-7] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 with status DOWN (replication=false)
+2020-05-21 12:01:02 [http-nio-8000-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 (replication=false)
+2020-05-21 12:01:07 [http-nio-8000-exec-4] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 with status UP (replication=false)
+2020-05-21 12:01:17 [Eureka-EvictionTimer] INFO  c.n.e.r.AbstractInstanceRegistry - Running the evict task with compensationTime 0ms
+2020-05-21 12:01:23 [http-nio-8000-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 with status DOWN (replication=false)
+2020-05-21 12:01:26 [http-nio-8000-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 (replication=false)
+2020-05-21 12:01:29 [http-nio-8000-exec-1] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-BE/sonali_cicd:hrd-emp-be:8083 with status UP (replication=false)
+2020-05-21 12:01:34 [http-nio-8000-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 with status DOWN (replication=false)
+2020-05-21 12:01:37 [http-nio-8000-exec-8] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 (replication=false)
+2020-05-21 12:01:39 [http-nio-8000-exec-5] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 with status UP (replication=false)
+2020-05-21 12:01:44 [http-nio-8000-exec-10] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 with status DOWN (replication=false)
+2020-05-21 12:01:47 [http-nio-8000-exec-6] INFO  c.n.e.r.AbstractInstanceRegistry - Cancelled instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 (replication=false)
+2020-05-21 12:01:49 [http-nio-8000-exec-2] INFO  c.n.e.r.AbstractInstanceRegistry - Registered instance HRD-EMP-FE/sonali_cicd:hrd-emp-fe:8082 with status UP (replication=false)
