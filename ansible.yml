@@ -1,0 +1,10 @@
+---
+- hosts: local
+  become: true
+  tasks:
+    - name: copy war onto tomcat servers
+      copy:
+        dest: /home/ecgc-cicd/Downloads/apache-tomcat-8.5.54/webapps/
+        src: /var/lib/jenkins/workspace/SonarQube-Demo/discoveryserver/target/discoveryserver-0.0.1-SNAPSHOT.war
+
+
