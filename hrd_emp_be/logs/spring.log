@@ -1,70 +1,35 @@
-2020-05-22 15:33:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2020-05-22 15:33:40 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
-2020-05-22 15:33:40 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/hrd-emp-be/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
-2020-05-22 15:33:40 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - No active profile set, falling back to default profiles: default
-2020-05-22 15:33:42 [main] WARN  o.s.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2020-05-22 15:33:42 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=249858dd-8694-3656-8a97-6e9224abd83d
-2020-05-22 15:33:43 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-05-22 15:33:43 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-22 15:33:43 [main] INFO  c.n.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@28b5662d
-2020-05-22 15:33:44 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 19 endpoint(s) beneath base path '/actuator'
-2020-05-22 15:33:44 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-05-22 15:33:45 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-05-22 15:33:45 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-22 15:33:45 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-22 15:33:45 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2020-05-22 15:33:46 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2020-05-22 15:33:46 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2020-05-22 15:33:46 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2020-05-22 15:33:46 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - Started TestNGController in 7.223 seconds (JVM running for 8.567)
-2020-05-22 15:33:46 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2020-05-22 15:33:46 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2020-05-22 15:33:46 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 15 ms
-2020-05-22 15:33:46 [main] INFO  i.e.e.h.c.EmployeeController - --Inside save employee data--
-2020-05-22 15:33:46 [main] ERROR i.e.e.h.c.EmployeeController - --Creating Employee with this data--
-2020-05-22 15:33:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2020-05-22 15:33:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2020-05-22 15:33:47 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Delete Employee--
-2020-05-22 15:33:47 [main] INFO  i.e.e.h.c.EmployeeController - --Deleting Employee Data--
-2020-05-22 15:33:47 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Get all employees--
-2020-05-22 15:33:47 [main] ERROR i.e.e.h.c.EmployeeController - --Fetching Employee data--
-2020-05-22 15:33:47 [SpringContextShutdownHook] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2020-05-22 15:33:47 [SpringContextShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HRD-EMP-BE with eureka with status DOWN
-2020-05-22 15:33:47 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-05-22 15:33:47 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2020-05-22 15:33:47 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-2020-05-22 15:51:57 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
-2020-05-22 15:51:57 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
-2020-05-22 15:51:57 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/hrd-emp-be/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
-2020-05-22 15:51:58 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - No active profile set, falling back to default profiles: default
-2020-05-22 15:51:59 [main] WARN  o.s.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
-2020-05-22 15:51:59 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=249858dd-8694-3656-8a97-6e9224abd83d
-2020-05-22 15:52:01 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-05-22 15:52:01 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-22 15:52:01 [main] INFO  c.n.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@34e990cc
-2020-05-22 15:52:01 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 19 endpoint(s) beneath base path '/actuator'
-2020-05-22 15:52:02 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2020-05-22 15:52:02 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
-2020-05-22 15:52:02 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2020-05-22 15:52:02 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2020-05-22 15:52:03 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
-2020-05-22 15:52:03 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2020-05-22 15:52:03 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2020-05-22 15:52:03 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2020-05-22 15:52:03 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - Started TestNGController in 6.786 seconds (JVM running for 8.062)
-2020-05-22 15:52:03 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
-2020-05-22 15:52:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
-2020-05-22 15:52:03 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 15 ms
-2020-05-22 15:52:03 [main] INFO  i.e.e.h.c.EmployeeController - --Inside save employee data--
-2020-05-22 15:52:03 [main] ERROR i.e.e.h.c.EmployeeController - --Creating Employee with this data--
-2020-05-22 15:52:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2020-05-22 15:52:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2020-05-22 15:52:04 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Delete Employee--
-2020-05-22 15:52:04 [main] INFO  i.e.e.h.c.EmployeeController - --Deleting Employee Data--
-2020-05-22 15:52:04 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Get all employees--
-2020-05-22 15:52:04 [main] ERROR i.e.e.h.c.EmployeeController - --Fetching Employee data--
-2020-05-22 15:52:04 [SpringContextShutdownHook] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
-2020-05-22 15:52:04 [SpringContextShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HRD-EMP-BE with eureka with status DOWN
-2020-05-22 15:52:04 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
-2020-05-22 15:52:04 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-2020-05-22 15:52:04 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2020-05-30 20:06:04 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Fetching config from server at : http://localhost:8888
+2020-05-30 20:06:05 [main] INFO  o.s.c.c.c.ConfigServicePropertySourceLocator - Connect Timeout Exception on Url - http://localhost:8888. Will be trying the next url if available
+2020-05-30 20:06:05 [main] WARN  o.s.c.c.c.ConfigServicePropertySourceLocator - Could not locate PropertySource: I/O error on GET request for "http://localhost:8888/hrd-emp-be/default": Connection refused (Connection refused); nested exception is java.net.ConnectException: Connection refused (Connection refused)
+2020-05-30 20:06:05 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - No active profile set, falling back to default profiles: default
+2020-05-30 20:06:07 [main] WARN  o.s.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-05-30 20:06:08 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=249858dd-8694-3656-8a97-6e9224abd83d
+2020-05-30 20:06:09 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-30 20:06:09 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-30 20:06:09 [main] INFO  c.n.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@1eb9d69a
+2020-05-30 20:06:10 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 19 endpoint(s) beneath base path '/actuator'
+2020-05-30 20:06:10 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-30 20:06:10 [main] WARN  c.n.c.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2020-05-30 20:06:10 [main] INFO  c.n.c.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-30 20:06:11 [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-30 20:06:11 [main] WARN  o.s.c.l.c.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-30 20:06:11 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-30 20:06:11 [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-30 20:06:12 [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-30 20:06:12 [main] INFO  i.e.erp.hrd_emp_be.TestNGController - Started TestNGController in 9.566 seconds (JVM running for 16.209)
+2020-05-30 20:06:12 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2020-05-30 20:06:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2020-05-30 20:06:12 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 15 ms
+2020-05-30 20:06:12 [main] INFO  i.e.e.h.c.EmployeeController - --Inside save employee data--
+2020-05-30 20:06:12 [main] ERROR i.e.e.h.c.EmployeeController - --Creating Employee with this data--
+2020-05-30 20:06:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-30 20:06:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-30 20:06:12 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Delete Employee--
+2020-05-30 20:06:12 [main] INFO  i.e.e.h.c.EmployeeController - --Deleting Employee Data--
+2020-05-30 20:06:12 [main] INFO  i.e.e.h.c.EmployeeController - --Inside Get all employees--
+2020-05-30 20:06:12 [main] ERROR i.e.e.h.c.EmployeeController - --Fetching Employee data--
+2020-05-30 20:06:13 [SpringContextShutdownHook] INFO  o.s.c.n.eureka.InstanceInfoFactory - Setting initial instance status as: STARTING
+2020-05-30 20:06:13 [SpringContextShutdownHook] INFO  o.s.c.n.e.s.EurekaServiceRegistry - Unregistering application HRD-EMP-BE with eureka with status DOWN
+2020-05-30 20:06:13 [SpringContextShutdownHook] INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-30 20:06:13 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-05-30 20:06:13 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
