@@ -70,13 +70,14 @@ pipeline {
  
     stage('Push Docker Images'){
              steps{
-          withCredentials([string(credentialsId: 'DockerHubID', variable: 'dockerId')]) {
+          withCredentials([string(credentialsId: 'DockerRegistryID', variable: 'DockerRegistryID')]) {
     // some block
-                  sh "docker login -u sdkanse -p ${dockerId}"
-       }
-            sh  "docker push sdkanse/discoveryserver:0.0.1-SNAPSHOT.jar"
-            sh  " docker push  sdkanse/hrd_emp_be:0.0.1-SNAPSHOT.jar"
-           sh  "docker push  sdkanse/hrd_emp_fe:0.0.1-SNAPSHOT.jar"
+                 // sh "docker login -u cdac -p ${DockerRegistryID}"
+           }
+
+            sh  "docker push docker-registry.cdacmumbai.in:5000/discoveryserver:0.0.1-SNAPSHOT.jar"
+            sh  " docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_be:0.0.1-SNAPSHOT.jar"
+           sh  "docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_fe:0.0.1-SNAPSHOT.jar"
 
          }           
      }
