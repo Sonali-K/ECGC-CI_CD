@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Cross Site Scripting (Reflected)",
+    "cweid": "79",
+    "wascid": "8",
+    "uri": "https:\/\/http://10.212.0.72:8082\/a\/certain\/url",
+    "method": "POST",
+    "param": "param1",
+    "attack": "<script>alert(1);</script>",
+    "evidence": "<script>alert(1);</script>"
+  },
+  {
+    "uri": "https:\/\/http://10.212.0.72:8082\/another/url",
+    "method": "GET"
+  }
+]
