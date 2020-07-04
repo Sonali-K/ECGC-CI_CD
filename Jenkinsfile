@@ -12,11 +12,9 @@ pipeline {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
-                
                 ''' 
             }
         }
-
         stage ('Git Checkout') {
             steps {
                  git 'https://github.com/Sonali-K/ECGC-CI_CD'
@@ -29,9 +27,8 @@ pipeline {
                 sh "mvn -f hrd_emp_fe/pom.xml compile"
                
             }
-        }
-        
-          stage('SonarQube analysis') {
+        } 
+       stage('SonarQube analysis') {
       steps {
         script {
           // requires SonarQube Scanner 2.8+
@@ -42,19 +39,15 @@ pipeline {
         }
       }
     }
-
   stage('Unit Test TestNG Report') {
             steps{
               script {
                    sh "mvn -f hrd_emp_be/pom.xml clean test"
-                     echo 'TestNG Report'
-                      
+                     echo 'TestNG Report'  
                         }
                          step([$class : 'Publisher', reportFilenamePattern : 'hrd_emp_be/test-output/testng-results.xml'])   
                           }
                    }
-
-      
        stage('Packaging And Build Docker Images') {
             steps {
                 echo "-=- packaging project -=-"
@@ -62,50 +55,57 @@ pipeline {
                 sh "mvn -f hrd_emp_be/pom.xml package"
                 sh "mvn -f hrd_emp_fe/pom.xml package"
                 sh "docker-compose build"
-               
-
-
             }
         }
- 
     stage('Push Docker Images'){
              steps{
           withCredentials([string(credentialsId: 'DockerRegistryID', variable: 'DockerRegistryID')]) {
-    // some block
+    
                  // sh "docker login -u cdac -p ${DockerRegistryID}"
            }
-
             sh  "docker push docker-registry.cdacmumbai.in:5000/discoveryserver:0.0.1-SNAPSHOT.jar"
             sh  " docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_be:0.0.1-SNAPSHOT.jar"
            sh  "docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_fe:0.0.1-SNAPSHOT.jar"
-
          }           
      }
-    
     stage ('Git Checkout1') {
             steps {
                  git 'https://github.com/NupurParalkar/ECGCQADemo'
             }
         }
-
      stage('QA Test Report') {
             steps{
               script {
                   // sh "mvn clean test"
-                     echo 'TestNG Report'
-                      
+                     echo 'TestNG Report'     
                         }
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
                           }
-      }
-
-
+                   }
+    stage('ZAP Setup and Initialization') {
+            steps {
+                script {
+                    startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /home/ecgc-cicd/Downloads/ZAP_2.7.0/zap.sh, allowing scans on github.com
+                }
+            }
+        }
+        stage('ZAP Scanning') {
+            steps {
+                script {
+                     // Proxy tests through ZAP
+                    runZapCrawler(host: "http://10.212.0.72:8082/")
+                }
+            }
+        }
     }
-    
     post {
         // Always runs. And it runs before any of the other post conditions.
         always {
+            script {
+                archiveZap(failAllAlerts: 0, failHighAlerts: 0, failMediumAlerts: 0, failLowAlerts: 0)
+            }
             // Let's wipe out the workspace before we finish!
+
             deleteDir()
         }
         success {
@@ -118,9 +118,7 @@ pipeline {
             sendEmail("Failed");
         }
     }
-
 }
-
 def developmentArtifactVersion = ''
 def releasedVersion = ''
 // get change log to be send over the mail
@@ -128,7 +126,6 @@ def releasedVersion = ''
 def getChangeString() {
     MAX_MSG_LEN = 100
     def changeString = ""
-
     echo "Gathering SCM changes"
     def changeLogSets = currentBuild.changeSets
     for (int i = 0; i < changeLogSets.size(); i++) {
@@ -139,13 +136,11 @@ def getChangeString() {
             changeString += " - ${truncated_msg} [${entry.author}]\n"
         }
     }
-
     if (!changeString) {
         changeString = " - No new changes"
     }
     return changeString
 }
-
 def sendEmail(status) {
     mail(
             to: "$EMAIL_RECIPIENTS",
