@@ -76,7 +76,7 @@ pipeline {
      stage('QA Test Report') {
             steps{
               script {
-                  // sh "mvn clean test"
+                   sh "mvn clean test"
                      echo 'TestNG Report'     
                         }
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
