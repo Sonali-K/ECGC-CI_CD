@@ -6,6 +6,9 @@ pipeline {
      // global env variables
     environment {
         EMAIL_RECIPIENTS = 'sonali.kanse021@gmail.com'
+        DOCKER_PUSH = 'docker-registry.cdacmumbai.in:5000/discoveryserver.jar'
+        DOCKER_PUSH1 = 'docker-registry.cdacmumbai.in:5000/hrd_emp_be.jar'
+        DOCKER_PUSH2 = 'docker-registry.cdacmumbai.in:5000/hrd_emp_fe.jar'
     }
     stages {
         stage ('Initialize') {
@@ -13,6 +16,10 @@ pipeline {
                 sh '''
                     echo "PATH = ${PATH}"
                 ''' 
+                //zAP Setup and Initialization
+                script {
+                    startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
+                }
             }
         }
         stage ('Git Checkout') {
@@ -39,7 +46,7 @@ pipeline {
         }
       }
     }
-  stage('Unit Test TestNG Report') {
+  stage('Unit Test and TestNG Report') {
             steps{
               script {
                    sh "mvn -f hrd_emp_be/pom.xml clean test"
@@ -57,15 +64,15 @@ pipeline {
                 sh "docker-compose build"
             }
         }
-    stage('Push Docker Images'){
+    stage('Push Docker Images To Docker Registry'){
              steps{
           withCredentials([string(credentialsId: 'DockerRegistryID', variable: 'DockerRegistryID')]) {
     
                  // sh "docker login -u cdac -p ${DockerRegistryID}"
            }
-            sh  "docker push docker-registry.cdacmumbai.in:5000/discoveryserver:0.0.1-SNAPSHOT.jar"
-            sh  " docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_be:0.0.1-SNAPSHOT.jar"
-           sh  "docker push  docker-registry.cdacmumbai.in:5000/hrd_emp_fe:0.0.1-SNAPSHOT.jar"
+             sh  "docker push $DOCKER_PUSH"
+             sh  " docker push $DOCKER_PUSH1"
+             sh  "docker push $DOCKER_PUSH2"
          }           
      }
     stage ('Git Checkout1') {
@@ -73,7 +80,7 @@ pipeline {
                  git 'https://github.com/NupurParalkar/ECGCQADemo'
             }
         }
-     stage('QA Test Report') {
+     stage('QA Test And Report') {
             steps{
               script {
                    sh "mvn clean test"
@@ -82,13 +89,7 @@ pipeline {
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
                           }
                    }
-    stage('ZAP Setup and Initialization') {
-            steps {
-                script {
-                    startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /home/ecgc-cicd/Downloads/ZAP_2.7.0/zap.sh, allowing scans on github.com
-                }
-            }
-        }
+    
         stage('ZAP Scanning') {
             steps {
                 script {
