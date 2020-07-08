@@ -11,10 +11,11 @@ pipeline {
         DOCKER_PUSH2 = 'docker-registry.cdacmumbai.in:5000/hrd_emp_fe.jar'
     }
     stages {
-        stage ('Initialize') {
+        stage ('Initialization') {
             steps {
                 sh '''
                     echo "PATH = ${PATH}"
+                
                 ''' 
                 //zAP Setup and Initialization
                 script {
@@ -22,9 +23,15 @@ pipeline {
                 }
             }
         }
-        stage ('Git Checkout') {
+
+        stage ('Git Checkouts') {
             steps {
+                //QA Test
+                 git 'https://github.com/NupurParalkar/ECGCQADemo'
+                 //MS Code
                  git 'https://github.com/Sonali-K/ECGC-CI_CD'
+
+
             }
         }
         stage("Maven Build"){
@@ -34,8 +41,9 @@ pipeline {
                 sh "mvn -f hrd_emp_fe/pom.xml compile"
                
             }
-        } 
-       stage('SonarQube analysis') {
+        }
+        
+          stage('SonarQube analysis') {
       steps {
         script {
           // requires SonarQube Scanner 2.8+
@@ -46,15 +54,19 @@ pipeline {
         }
       }
     }
+
   stage('Unit Test and TestNG Report') {
             steps{
               script {
                    sh "mvn -f hrd_emp_be/pom.xml clean test"
-                     echo 'TestNG Report'  
+                     echo 'TestNG Report'
+                      
                         }
                          step([$class : 'Publisher', reportFilenamePattern : 'hrd_emp_be/test-output/testng-results.xml'])   
                           }
                    }
+
+      
        stage('Packaging And Build Docker Images') {
             steps {
                 echo "-=- packaging project -=-"
@@ -62,52 +74,72 @@ pipeline {
                 sh "mvn -f hrd_emp_be/pom.xml package"
                 sh "mvn -f hrd_emp_fe/pom.xml package"
                 sh "docker-compose build"
+               
+
+
             }
         }
-    stage('Push Docker Images To Docker Registry'){
+ 
+    stage('Push Docker Images To Docker Registry '){
              steps{
           withCredentials([string(credentialsId: 'DockerRegistryID', variable: 'DockerRegistryID')]) {
-    
+    // some block
                  // sh "docker login -u cdac -p ${DockerRegistryID}"
            }
-             sh  "docker push $DOCKER_PUSH"
+
+            sh  "docker push $DOCKER_PUSH"
              sh  " docker push $DOCKER_PUSH1"
              sh  "docker push $DOCKER_PUSH2"
          }           
      }
-    stage ('Git Checkout1') {
+    
+    /*stage ('Git Checkout1') {
             steps {
                  git 'https://github.com/NupurParalkar/ECGCQADemo'
             }
-        }
-     stage('QA Test And Report') {
+       }*/
+
+     stage('QA Test and Report') {
             steps{
               script {
-                   sh "mvn clean test"
-                     echo 'TestNG Report'     
+                  // sh "mvn clean test"
+                     echo 'TestNG Report'
+                      
                         }
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
                           }
                    }
     
+       /*   stage('ZAP Setup and Initialization') {
+            steps {
+               script {
+                   startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
+                }
+            }
+        }*/
         stage('ZAP Scanning') {
             steps {
                 script {
-                     // Proxy tests through ZAP
+                    //sh "mvn verify -Dhttp.proxyHost=http://10.212.0.72:8082/ -Dhttp.proxyPort=8082 -Dhttps.proxyHost=http://10.212.0.72:8082/ -Dhttps.proxyPort=8082" // Proxy tests through ZAP
                     runZapCrawler(host: "http://10.212.0.72:8082/")
                 }
+                
             }
         }
+
     }
+    
+    
     post {
         // Always runs. And it runs before any of the other post conditions.
         always {
+        
             script {
                 archiveZap(failAllAlerts: 0, failHighAlerts: 0, failMediumAlerts: 0, failLowAlerts: 0)
             }
-            // Let's wipe out the workspace before we finish!
 
-            deleteDir()
+            // Let's wipe out the workspace before we finish!
+             deleteDir()
         }
         success {
             sendEmail("Successful");
@@ -119,7 +151,9 @@ pipeline {
             sendEmail("Failed");
         }
     }
+
 }
+
 def developmentArtifactVersion = ''
 def releasedVersion = ''
 // get change log to be send over the mail
@@ -127,6 +161,7 @@ def releasedVersion = ''
 def getChangeString() {
     MAX_MSG_LEN = 100
     def changeString = ""
+
     echo "Gathering SCM changes"
     def changeLogSets = currentBuild.changeSets
     for (int i = 0; i < changeLogSets.size(); i++) {
@@ -137,14 +172,18 @@ def getChangeString() {
             changeString += " - ${truncated_msg} [${entry.author}]\n"
         }
     }
+
     if (!changeString) {
         changeString = " - No new changes"
     }
     return changeString
 }
+
 def sendEmail(status) {
     mail(
             to: "$EMAIL_RECIPIENTS",
             subject: "Build $BUILD_NUMBER - " + status + " (${currentBuild.fullDisplayName})",
             body: "Changes:\n " + getChangeString() + "\n\n Check console output at: $BUILD_URL console" + "\n")
 }
+
+
