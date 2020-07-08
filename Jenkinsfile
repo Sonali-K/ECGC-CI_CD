@@ -24,7 +24,7 @@ pipeline {
             }
         }
 
-        stage ('Git Checkouts') {
+        stage ('Checkouts') {
             steps {
                 //QA Test
                  git 'https://github.com/NupurParalkar/ECGCQADemo'
@@ -34,7 +34,7 @@ pipeline {
 
             }
         }
-        stage("Maven Build"){
+        stage("Build"){
             steps{
                 sh "mvn -f discoveryserver/pom.xml compile" 
                 sh "mvn -f hrd_emp_be/pom.xml compile"
@@ -43,7 +43,7 @@ pipeline {
             }
         }
         
-     stage('SonarQube analysis') {
+     stage('Code Analysis') {
       steps {
         script {
           // requires SonarQube Scanner 2.8+
@@ -55,7 +55,7 @@ pipeline {
       }
     }
 
-  stage('Unit Test and TestNG Report') {
+  stage('Unit Testing') {
             steps{
               script {
                    sh "mvn -f hrd_emp_be/pom.xml clean test"
@@ -67,7 +67,7 @@ pipeline {
                    }
 
       
-       stage('Packaging And Build Docker Images') {
+       stage('Containerization') {
             steps {
                 echo "-=- packaging project -=-"
                 sh "mvn -f discoveryserver/pom.xml package"
@@ -96,7 +96,7 @@ pipeline {
             }
        }*/
 
-     stage('QA Test and Report') {
+     stage('Functional Testing') {
             steps{
               script {
                    sh "mvn clean test"
@@ -115,7 +115,7 @@ pipeline {
             }
         }*/
         
-        stage('ZAP Scanning') {
+        stage('Security Testing') {
             steps {
                 script {
                     //sh "mvn verify -Dhttp.proxyHost=http://10.212.0.72:8082/ -Dhttp.proxyPort=8082 -Dhttps.proxyHost=http://10.212.0.72:8082/ -Dhttps.proxyPort=8082" // Proxy tests through ZAP
