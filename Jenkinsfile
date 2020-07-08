@@ -27,11 +27,9 @@ pipeline {
         stage ('Checkouts') {
             steps {
                 //QA Test
-                 git 'https://github.com/NupurParalkar/ECGCQADemo'
+                git 'https://github.com/NupurParalkar/ECGCQADemo'
                  //MS Code
                  git 'https://github.com/Sonali-K/ECGC-CI_CD'
-
-
             }
         }
         stage("Build"){
@@ -43,7 +41,7 @@ pipeline {
             }
         }
         
-     stage('Code Analysis') {
+          stage('Code Analysis') {
       steps {
         script {
           // requires SonarQube Scanner 2.8+
@@ -67,17 +65,42 @@ pipeline {
                    }
 
       
-       stage('Containerization') {
+       stage('Containerazation') {
             steps {
                 echo "-=- packaging project -=-"
                 sh "mvn -f discoveryserver/pom.xml package"
                 sh "mvn -f hrd_emp_be/pom.xml package"
                 sh "mvn -f hrd_emp_fe/pom.xml package"
                 sh "docker-compose build"
+
             }
         }
  
-    stage('Push Docker Images To Docker Registry '){
+     stage('Functional Testing') {
+            steps{
+                git 'https://github.com/NupurParalkar/ECGCQADemo'
+
+              script {
+                   sh "mvn clean test"
+                     echo 'TestNG Report'
+                      
+                        }
+                         step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
+                          }
+                   }
+    
+       
+        stage('Security Testing') {
+            steps {
+                script {
+                    //sh "mvn verify -Dhttp.proxyHost=http://10.212.0.72:8082/ -Dhttp.proxyPort=8082 -Dhttps.proxyHost=http://10.212.0.72:8082/ -Dhttps.proxyPort=8082" // Proxy tests through ZAP
+                    runZapCrawler(host: "http://10.212.0.72:8082/")
+                }
+                
+            }
+        }
+        
+        stage('Upload Images '){
              steps{
           withCredentials([string(credentialsId: 'DockerRegistryID', variable: 'DockerRegistryID')]) {
     // some block
@@ -89,41 +112,7 @@ pipeline {
              sh  "docker push $DOCKER_PUSH2"
          }           
      }
-    
-    /*stage ('Git Checkout1') {
-            steps {
-                 git 'https://github.com/NupurParalkar/ECGCQADemo'
-            }
-       }*/
 
-     stage('Functional Testing') {
-            steps{
-              script {
-                   sh "mvn clean test"
-                     echo 'TestNG Report'
-                      
-                        }
-                         step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
-                          }
-                   }
-    
-       /*   stage('ZAP Setup and Initialization') {
-            steps {
-               script {
-                   startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
-                }
-            }
-        }*/
-        
-        stage('Security Testing') {
-            steps {
-                script {
-                    //sh "mvn verify -Dhttp.proxyHost=http://10.212.0.72:8082/ -Dhttp.proxyPort=8082 -Dhttps.proxyHost=http://10.212.0.72:8082/ -Dhttps.proxyPort=8082" // Proxy tests through ZAP
-                    runZapCrawler(host: "http://10.212.0.72:8082/")
-                }
-                
-            }
-        }
 
     }
     
@@ -160,7 +149,7 @@ def getChangeString() {
     MAX_MSG_LEN = 100
     def changeString = ""
 
-    //echo "Gathering SCM changes"
+    echo "Gathering SCM changes"
     def changeLogSets = currentBuild.changeSets
     for (int i = 0; i < changeLogSets.size(); i++) {
         def entries = changeLogSets[i].items
