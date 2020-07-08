@@ -43,7 +43,7 @@ pipeline {
             }
         }
         
-          stage('SonarQube analysis') {
+     stage('SonarQube analysis') {
       steps {
         script {
           // requires SonarQube Scanner 2.8+
@@ -74,9 +74,6 @@ pipeline {
                 sh "mvn -f hrd_emp_be/pom.xml package"
                 sh "mvn -f hrd_emp_fe/pom.xml package"
                 sh "docker-compose build"
-               
-
-
             }
         }
  
@@ -102,7 +99,7 @@ pipeline {
      stage('QA Test and Report') {
             steps{
               script {
-                  // sh "mvn clean test"
+                   sh "mvn clean test"
                      echo 'TestNG Report'
                       
                         }
@@ -117,6 +114,7 @@ pipeline {
                 }
             }
         }*/
+        
         stage('ZAP Scanning') {
             steps {
                 script {
