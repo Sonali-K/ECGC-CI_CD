@@ -162,7 +162,7 @@ def getChangeString() {
     MAX_MSG_LEN = 100
     def changeString = ""
 
-    echo "Gathering SCM changes"
+    //echo "Gathering SCM changes"
     def changeLogSets = currentBuild.changeSets
     for (int i = 0; i < changeLogSets.size(); i++) {
         def entries = changeLogSets[i].items
@@ -183,7 +183,7 @@ def sendEmail(status) {
     mail(
             to: "$EMAIL_RECIPIENTS",
             subject: "Build $BUILD_NUMBER - " + status + " (${currentBuild.fullDisplayName})",
-            body: "Changes:\n " + getChangeString() + "\n\n Check console output at: $BUILD_URL console" + "\n")
+            body: "Changes:\n " + getChangeString() + "\n\n Check console output at: $BUILD_URL/console" + "\n")
 }
 
 
