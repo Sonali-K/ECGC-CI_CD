@@ -88,7 +88,17 @@ pipeline {
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
                           }
                    }
-    
+     stage('Performance Testing') {
+            steps{
+
+              script {
+sh "cd /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/ sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/HRDemo.jmx -l /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl"
+                     echo 'TestNG Report'
+                     perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
+                      
+                        }
+                     }
+                   }
        
         stage('Security Testing') {
             steps {
