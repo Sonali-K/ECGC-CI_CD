@@ -17,7 +17,7 @@ pipeline {
                     echo "PATH = ${PATH}"
                 
                 ''' 
-                //zAP Setup and Initialization
+                //ZAP Setup and Initialization
                 script {
                     startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
                 }
@@ -30,6 +30,10 @@ pipeline {
                 git 'https://github.com/NupurParalkar/ECGCQADemo'
                  //MS Code
                  git 'https://github.com/Sonali-K/ECGC-CI_CD'
+                 
+                
+
+
             }
         }
         stage("Build"){
@@ -72,10 +76,19 @@ pipeline {
                 sh "mvn -f hrd_emp_be/pom.xml package"
                 sh "mvn -f hrd_emp_fe/pom.xml package"
                 sh "docker-compose build"
+               
+
 
             }
         }
  
+        
+    /*stage ('Git Checkout1') {
+            steps {
+                 git 'https://github.com/NupurParalkar/ECGCQADemo'
+            }
+       }*/
+
      stage('Functional Testing') {
             steps{
                 git 'https://github.com/NupurParalkar/ECGCQADemo'
@@ -88,18 +101,27 @@ pipeline {
                          step([$class : 'Publisher', reportFilenamePattern : '**/testng-results.xml'])   
                           }
                    }
-     stage('Performance Testing') {
+    
+       /*   stage('ZAP Setup and Initialization') {
+            steps {
+               script {
+                   startZap(host: "localhost", port: 8090, timeout:500, zapHome: "/home/ecgc-cicd/Downloads/ZAP_2.7.0/",allowedHosts:['github.com']) // Start ZAP at /opt/zaproxy/zap.sh, allowing scans on github.com
+                }
+            }
+        }*/
+        
+        stage('Performance Testing') {
             steps{
 
               script {
 sh "cd /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/ sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/HRDemo.jmx -l /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl"
                      echo 'TestNG Report'
-                    // perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
+                   //  perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
                       
                         }
                      }
                    }
-       
+    
         stage('Security Testing') {
             steps {
                 script {
@@ -130,16 +152,15 @@ sh "cd /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/ sh jmeter.sh -Jj
     post {
         // Always runs. And it runs before any of the other post conditions.
         always {
-        
-            script{
-                                 perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
-
-            }
+            
+        //ZAP Report
             script {
                 archiveZap(failAllAlerts: 0, failHighAlerts: 0, failMediumAlerts: 0, failLowAlerts: 0)
             }
-
-            
+       //Jmeter Report
+            script{  
+         perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
+            }
             // Let's wipe out the workspace before we finish!
              deleteDir()
         }
@@ -187,5 +208,3 @@ def sendEmail(status) {
             subject: "Build $BUILD_NUMBER - " + status + " (${currentBuild.fullDisplayName})",
             body: "Changes:\n " + getChangeString() + "\n\n Check console output at: $BUILD_URL/console" + "\n")
 }
-
-
