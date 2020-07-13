@@ -94,7 +94,7 @@ pipeline {
               script {
 sh "cd /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/ sh jmeter.sh -Jjmeter.save.saveservice.output_format=xml -n -t /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/HRDemo.jmx -l /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl"
                      echo 'TestNG Report'
-                     perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
+                    // perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
                       
                         }
                      }
@@ -131,10 +131,15 @@ sh "cd /home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/ sh jmeter.sh -Jj
         // Always runs. And it runs before any of the other post conditions.
         always {
         
+            script{
+                                 perfReport '/home/ecgc-cicd/Downloads/Jemeter/apache-jmeter-5.3/bin/report.jtl'
+
+            }
             script {
                 archiveZap(failAllAlerts: 0, failHighAlerts: 0, failMediumAlerts: 0, failLowAlerts: 0)
             }
 
+            
             // Let's wipe out the workspace before we finish!
              deleteDir()
         }
