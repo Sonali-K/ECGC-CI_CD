@@ -27,7 +27,8 @@ pipeline {
         stage ('Checkouts') {
             steps {
                 //QA Test
-                git 'https://github.com/NupurParalkar/ECGCQADemo'
+                //git 'https://github.com/NupurParalkar/ECGCQADemo'
+                 git url: "http://10.212.0.139/testgroup/ecgcdashboardproject", branch: 'master', credentialsId: 'Gitlab-Key'
                  //MS Code
                  git 'https://github.com/Sonali-K/ECGC-CI_CD'
                  
@@ -91,7 +92,8 @@ pipeline {
 
      stage('Functional Testing') {
             steps{
-                git 'https://github.com/NupurParalkar/ECGCQADemo'
+                //git 'https://github.com/NupurParalkar/ECGCQADemo'
+                 git url: "http://10.212.0.139/testgroup/ecgcdashboardproject", branch: 'master', credentialsId: 'Gitlab-Key'
 
               script {
                    sh "mvn clean test"
